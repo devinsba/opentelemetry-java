@@ -7,6 +7,7 @@ include ":opentelemetry-contrib-trace-utils"
 include ":opentelemetry-exporters-inmemory"
 include ":opentelemetry-exporters-jaeger"
 include ":opentelemetry-exporters-logging"
+include ":opentelemetry-exporters-zipkin"
 include ":opentelemetry-opentracing-shim"
 include ":opentelemetry-proto"
 include ":opentelemetry-sdk"
@@ -22,6 +23,7 @@ project(':opentelemetry-contrib-trace-utils').projectDir = "$rootDir/contrib/tra
 project(':opentelemetry-exporters-inmemory').projectDir = "$rootDir/exporters/inmemory" as File
 project(':opentelemetry-exporters-jaeger').projectDir = "$rootDir/exporters/jaeger" as File
 project(':opentelemetry-exporters-logging').projectDir = "$rootDir/exporters/logging" as File
+project(':opentelemetry-exporters-zipkin').projectDir = "$rootDir/exporters/zipkin" as File
 project(':opentelemetry-opentracing-shim').projectDir = "$rootDir/opentracing_shim" as File
 project(':opentelemetry-sdk').projectDir = "$rootDir/sdk" as File
 project(':opentelemetry-sdk-contrib-async-processor').projectDir =

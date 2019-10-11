@@ -113,6 +113,7 @@ subprojects {
         opentracingVersion = '0.33.0'
         protobufVersion = '3.9.0'
         protocVersion = '3.9.0'
+        zipkinReporterVersion = '2.10.3'
 
         libraries = [
                 auto_value: "com.google.auto.value:auto-value:${autoValueVersion}",
@@ -127,6 +128,8 @@ subprojects {
                 jsr305: "com.google.code.findbugs:jsr305:${findBugsJsr305Version}",
                 protobuf: "com.google.protobuf:protobuf-java:${protobufVersion}",
                 protobuf_util: "com.google.protobuf:protobuf-java-util:${protobufVersion}",
+                zipkin_reporter: "io.zipkin.reporter2:zipkin-reporter:${zipkinReporterVersion}",
+                zipkin_urlconnection: "io.zipkin.reporter2:zipkin-sender-urlconnection:${zipkinReporterVersion}",
 
                 // Compatibility layer
                 opentracing: "io.opentracing:opentracing-api:${opentracingVersion}",
@@ -151,7 +154,7 @@ subprojects {
     }
 
     dependencies {
-        compileOnly libraries.auto_value_annotation,
+        api libraries.auto_value_annotation,
                 libraries.errorprone_annotation,
                 libraries.jsr305
 

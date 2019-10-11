@@ -1,0 +1,22 @@
+description = 'OpenTelemetry - Zipkin Exporter'
+
+dependencies {
+    api project(':opentelemetry-sdk'),
+            libraries.zipkin_reporter,
+            libraries.zipkin_urlconnection
+    
+    annotationProcessor libraries.auto_value
+
+    testImplementation "io.grpc:grpc-testing:${grpcVersion}"
+    testRuntime "io.grpc:grpc-netty-shaded:${grpcVersion}"
+
+    signature "org.codehaus.mojo.signature:java17:1.0@signature"
+    signature "net.sf.androidscents.signature:android-api-level-14:4.0_r4@signature"
+}
+
+animalsniffer {
+    // Don't check sourceSets.jmh and sourceSets.test
+    sourceSets = [
+            sourceSets.main
+    ]
+}
